@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>26788455875-oo7thrtq1otsjqjkpdkhql6ocvf3oo4l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.26788455875-oo7thrtq1otsjqjkpdkhql6ocvf3oo4l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB9j8MHvzAkysRlQA8urUYVAV2exyGpOVk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>26788455875</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Apleeks.SpeedZee</string>
+	<key>PROJECT_ID</key>
+	<string>speedzee-bd329</string>
+	<key>STORAGE_BUCKET</key>
+	<string>speedzee-bd329.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:26788455875:ios:6ed93bc39893ebe3f14976</string>
+	<key>DATABASE_URL</key>
+	<string>https://speedzee-bd329.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "26788455875",
+    "firebase_url": "https://speedzee-bd329.firebaseio.com",
+    "project_id": "speedzee-bd329",
+    "storage_bucket": "speedzee-bd329.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26788455875:android:a5969e8d65866c51f14976",
+        "android_client_info": {
+          "package_name": "com.Apleeks.SpeedZee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26788455875-l4oen5phkk2kqalrengosm1ea6sjcbs3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhPV_-AoQY3ao865hFYz6K2jQD39xXgXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26788455875-l4oen5phkk2kqalrengosm1ea6sjcbs3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "26788455875-oo7thrtq1otsjqjkpdkhql6ocvf3oo4l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Apleeks.SpeedZee"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

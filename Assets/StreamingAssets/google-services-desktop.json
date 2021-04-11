@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 1
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "26788455875-oo7thrtq1otsjqjkpdkhql6ocvf3oo4l.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9j8MHvzAkysRlQA8urUYVAV2exyGpOVk"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:26788455875:ios:6ed93bc39893ebe3f14976", 
+        "android_client_info": {
+          "package_name": "com.Apleeks.SpeedZee"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "speedzee-bd329.appspot.com", 
+    "project_id": "speedzee-bd329", 
+    "firebase_url": "https://speedzee-bd329.firebaseio.com", 
+    "project_number": "26788455875"
+  }
+}

@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Collections</name>
+  </assembly>
+  <members>
+    <member name="T:System.Collections.BitArray">
+      <summary>管理以布林 (Boolean) 表示的位元值之精簡陣列，其中 true 表示位元為開啟 (1)，而 false 表示位元為關閉 (0)。</summary>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Collections.BitArray.#ctor(System.Boolean[])">
+      <summary>初始化 <see cref="T:System.Collections.BitArray" /> 類別的新執行個體，其包含的位元值是從指定的布林陣列複製過來的。</summary>
+      <param name="values">要複製的布林值陣列。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="values" /> is null. </exception>
+    </member>
+    <member name="M:System.Collections.BitArray.#ctor(System.Byte[])">
+      <summary>初始化 <see cref="T:System.Collections.BitArray" /> 類別的新執行個體，其包含的位元值是從指定的位元組陣列複製過來的。</summary>
+      <param name="bytes">包含要複製值的位元組陣列，其中每一個位元組表示 8 個連續位元。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="bytes" /> is null. </exception>
+      <exception cref="T:System.ArgumentException">The length of <paramref name="bytes" /> is greater than <see cref="F:System.Int32.MaxValue" />.</exception>
+    </member>
+    <member name="M:System.Collections.BitArray.#ctor(System.Collections.BitArray)">
+      <summary>初始化 <see cref="T:System.Collections.BitArray" /> 類別的新執行個體，其包含的位元值是從指定的 <see cref="T:System.Collections.BitArray" /> 複製過來的。</summary>
+      <param name="bits">要複製的 <see cref="T:System.Collections.BitArray" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="bits" /> is null. </exception>
+    </member>
+    <member name="M:System.Collections.BitArray.#ctor(System.Int32)">
+      <summary>初始化 <see cref="T:System.Collections.BitArray" /> 類別的新執行個體，這個執行個體可保存指定數目的位元值 (其初始設定為 false)。</summary>
+      <param name="length">在新 <see cref="T:System.Collections.BitArray" /> 中的位元值數目。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="length" /> is less than zero. </exception>
+    </member>
+    <member name="M:System.Collections.BitArray.#ctor(System.Int32,System.Boolean)">
+      <summary>初始化 <see cref="T:System.Collections.BitArray" /> 類別的新執行個體，其可以保存指定位元值數目 (初始設定為指定的值)。</summary>
+      <param name="length">在新 <see cref="T:System.Collections.BitArray" /> 中的位元值數目。</param>
+      <param name="defaultValue">要指派給每一個位元的布林值。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="length" /> is less than zero. </exception>
+    </member>
+    <member name="M:System.Collections.BitArray.#ctor(System.Int32[])">
+      <summary>初始化 <see cref="T:System.Collections.BitArray" /> 類別的新執行個體，其包含的位元值是從指定的 32 位元整數陣列複製過來的。</summary>
+      <param name="values">包含要複製值的整數陣列，其中每一個整數代表 32 個連續位元。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="values" /> is null. </exception>
+      <exception cref="T:System.ArgumentException">The length of <paramref name="values" /> is greater than <see cref="F:System.Int32.MaxValue" /></exception>
+    </member>
+    <member name="M:System.Collections.BitArray.And(System.Collections.BitArray)">
+      <summary>在目前 <see cref="T:System.Collections.BitArray" /> 中的項目上，針對指定的 <see cref="T:System.Collections.BitArray" /> 中的對應項目，執行位元的 AND 運算。</summary>
+      <returns>目前執行個體，包含目前 <see cref="T:System.Collections.BitArray" /> 的項目與指定 <see cref="T:System.Collections.BitArray" /> 的對應項目之間位元 AND 運算的結果。</returns>
+      <param name="value">
+        <see cref="T:System.Collections.BitArray" />，用來執行位元的 AND 運算。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> is null. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> and the current <see cref="T:System.Collections.BitArray" /> do not have the same number of elements. </exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Collections.BitArray.Get(System.Int32)">
+      <summary>取得 <see cref="T:System.Collections.BitArray" /> 中指定位置的位元值。</summary>
+      <returns>在 <paramref name="index" /> 位置的位元值。</returns>
+      <param name="index">要取得的值的以零為起始的索引。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> is less than zero.-or- <paramref name="index" /> is greater than or equal to the number of elements in the <see cref="T:System.Collections.BitArray" />. </exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Collections.BitArray.GetEnumerator">
+      <summary>傳回在 <see cref="T:System.Collections.BitArray" /> 中逐一查看的列舉值。</summary>
+      <returns>整個 <see cref="T:System.Collections.BitArray" /> 的 <see cref="T:System.Collections.IEnumerator" />。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:System.Collections.BitArray.Item(System.Int32)">
+      <summary>取得或設定在 <see cref="T:System.Collections.BitArray" /> 中特定位置的位元值。</summary>
+      <returns>在 <paramref name="index" /> 位置的位元值。</returns>
+      <param name="index">要取得或設定的值之以零為起始的索引。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> is less than zero.-or- <paramref name="index" /> is equal to or greater than <see cref="P:System.Collections.BitArray.Count" />. </exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="P:System.Collections.BitArray.Length">
+      <summary>取得或設定 <see cref="T:System.Collections.BitArray" /> 中的項目數。</summary>
+      <returns>
+        <see cref="T:System.Collections.BitArray" /> 中的項目數。</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">The property is set to a value that is less than zero. </exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Collections.BitArray.Not">
+      <summary>反轉目前 <see cref="T:System.Collections.BitArray" /> 中的位元值，使得設定為 true 的項目變更為 false，並且設定為 false 的項目變更為 true。</summary>
+      <returns>具有已轉換位元值的目前執行個體。</returns>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Collections.BitArray.Or(System.Collections.BitArray)">
+      <summary>在目前 <see cref="T:System.Collections.BitArray" /> 中的項目上，針對指定的 <see cref="T:System.Collections.BitArray" /> 中的對應項目，執行位元的 OR 運算。</summary>
+      <returns>目前執行個體，包含目前 <see cref="T:System.Collections.BitArray" /> 的項目與指定 <see cref="T:System.Collections.BitArray" /> 的對應項目之間位元 OR 運算的結果。</returns>
+      <param name="value">
+        <see cref="T:System.Collections.BitArray" />，用來執行位元的 OR 運算。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> is null. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> and the current <see cref="T:System.Collections.BitArray" /> do not have the same number of elements. </exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Collections.BitArray.Set(System.Int32,System.Boolean)">
+      <summary>將 <see cref="T:System.Collections.BitArray" /> 中特定位置的位元設定為指定值。</summary>
+      <param name="index">要設定之位元的以零為起始的索引。</param>
+      <param name="value">要指派給位元的布林值。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> is less than zero.-or- <paramref name="index" /> is greater than or equal to the number of elements in the <see cref="T:System.Collections.BitArray" />. </exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Collections.BitArray.SetAll(System.Boolean)">
+      <summary>將 <see cref="T:System.Collections.BitArray" /> 中的所有位元設定為指定值。</summary>
+      <param name="value">要指派給所有位元的布林值。</param>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="M:System.Collections.BitArray.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>從特定的 <see cref="T:System.Array" /> 索引開始，將 <see cref="T:System.Collections.BitArray" /> 的項目複製至 <see cref="T:System.Array" />。</summary>
+      <param name="array">一維 <see cref="T:System.Array" />，是從 <see cref="T:System.Collections.BitArray" /> 複製過來之項目的目的端。<see cref="T:System.Array" /> 必須有以零為起始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中以零為起始的索引，是複製開始的位置。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="array" /> is null. </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> is less than zero. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="array" /> is multidimensional.-or- The number of elements in the source <see cref="T:System.Collections.BitArray" /> is greater than the available space from <paramref name="index" /> to the end of the destination <paramref name="array" />.-or-The type of the source <see cref="T:System.Collections.BitArray" /> cannot be cast automatically to the type of the destination <paramref name="array" />.</exception>
+    </member>
+    <member name="P:System.Collections.BitArray.System#Collections#ICollection#Count">
+      <summary>取得 <see cref="T:System.Collections.BitArray" /> 中的項目數目。</summary>
+      <returns>
+        <see cref="T:System.Collections.BitArray" /> 中的項目數。</returns>
+    </member>
+    <member name="P:System.Collections.BitArray.System#Collections#ICollection#IsSynchronized">
+      <summary>取得值，指出 <see cref="T:System.Collections.BitArray" /> 的存取是否同步 (安全執行緒)。</summary>
+      <returns>如果對 <see cref="T:System.Collections.BitArray" /> 的存取為同步 (安全執行緒)，則為 true，否則為 false。</returns>
+    </member>
+    <member name="P:System.Collections.BitArray.System#Collections#ICollection#SyncRoot">
+      <summary>取得可用以同步存取 <see cref="T:System.Collections.BitArray" /> 的物件。</summary>
+      <returns>可用以同步存取 <see cref="T:System.Collections.BitArray" /> 的物件。</returns>
+    </member>
+    <member name="M:System.Collections.BitArray.Xor(System.Collections.BitArray)">
+      <summary>在目前 <see cref="T:System.Collections.BitArray" /> 中的項目上，針對指定的 <see cref="T:System.Collections.BitArray" /> 中的對應項目，執行位元互斥 OR 運算。</summary>
+      <returns>目前執行個體，包含目前 <see cref="T:System.Collections.BitArray" /> 的項目與指定 <see cref="T:System.Collections.BitArray" /> 的對應項目之間位元互斥 OR 運算的結果。</returns>
+      <param name="value">
+        <see cref="T:System.Collections.BitArray" />，用來執行位元互斥 OR 運算。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="value" /> is null. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> and the current <see cref="T:System.Collections.BitArray" /> do not have the same number of elements. </exception>
+      <filterpriority>2</filterpriority>
+    </member>
+    <member name="T:System.Collections.StructuralComparisons">
+      <summary>提供物件，用以執行兩個集合物件的結構比較。</summary>
+    </member>
+    <member name="P:System.Collections.StructuralComparisons.StructuralComparer">
+      <summary>取得預先定義的物件，這個物件會執行兩個物件的結構比較。</summary>
+      <returns>預先定義的物件，用來執行兩個集合物件的結構比較。</returns>
+    </member>
+    <member name="P:System.Collections.StructuralComparisons.StructuralEqualityComparer">
+      <summary>取得預先定義的物件，這個物件會比較兩個物件的結構是否相等。</summary>
+      <returns>預先定義的物件，用來比較兩個集合物件的結構是否相等。</returns>
+    </member>
+    <member name="T:System.Collections.Generic.Comparer`1">
+      <summary>提供基底類別 (Base Class) 用於 <see cref="T:System.Collections.Generic.IComparer`1" /> 泛型介面的實作。</summary>
+      <typeparam name="T">要比較之物件的型別。</typeparam>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.Collections.Generic.Comparer`1.#ctor">
+      <summary>初始化 <see cref="T:System.Collections.Generic.Comparer`1" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.Collections.Generic.Comparer`1.Compare(`0,`0)">
+      <summary>在衍生類別中覆寫時，比較型別相同的兩個物件並傳回值，指出一個物件是小於、等於還是大於另一個物件。</summary>
+      <returns>帶正負號的整數，表示 <paramref name="x" /> 和 <paramref name="y" /> 的相對值，如下表所示。值意義小於零<paramref name="x" /> 小於 <paramref name="y" />。Zero<paramref name="x" /> 等於 <paramref name="y" />。大於零<paramref name="x" /> 大於 <paramref name="y" />。</returns>
+      <param name="x">要比較的第一個物件。</param>
+      <param name="y">要比較的第二個物件。</param>
+      <exception cref="T:System.ArgumentException">型別 <paramref name="T" /> 不實作 <see cref="T:System.IComparable`1" /> 泛型介面或 <see cref="T:System.IComparable" /> 介面。</exception>
+    </member>
+    <member name="M:System.Collections.Generic.Comparer`1.Create(System.Comparison{`0})">
+      <summary>使用指定的比較建立比較子。</summary>
+      <returns>新的比較子。</returns>
+      <param name="comparison">要使用的比較。</param>
+    </member>
+    <member name="P:System.Collections.Generic.Comparer`1.Default">
+      <summary>傳回泛型引數指定之型別的預設排序次序比較子 (Comparer)。</summary>
+      <returns>物件，繼承 <see cref="T:System.Collections.Generic.Comparer`1" />，並用做型別 <paramref name="T" /> 的排序次序比較子。</returns>
+    </member>
+    <member name="M:System.Collections.Generic.Comparer`1.System#Collections#IComparer#Compare(System.Object,System.Object)">
+      <summary>比較兩個物件並傳回值，指出其中一個物件為小於、等於或大於另一個物件。</summary>
+      <returns>帶正負號的整數，表示 <paramref name="x" /> 和 <paramref name="y" /> 的相對值，如下表所示。值意義小於零<paramref name="x" /> 小於 <paramref name="y" />。Zero<paramref name="x" /> 等於 <paramref name="y" />。大於零<paramref name="x" /> 大於 <paramref name="y" />。</returns>
+      <param name="x">要比較的第一個物件。</param>
+      <param name="y">要比較的第二個物件。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="x" /> 或 <paramref name="y" /> 的型別無法轉型為型別 <paramref name="T" />。-或-<paramref name="x" /> 和 <paramref name="y" /> 不實作 <see cref="T:System.IComparable`1" /> 泛型介面或 <see cref="T:System.IComparable" /> 介面。</exception>
+    </member>
+    <member name="T:System.Collections.Generic.Dictionary`2">
+      <summary>表示索引鍵和值的集合。若要浏览此类型的.NET Framework 源代码，请参阅 Reference Source。</summary>
+      <typeparam name="TKey">字典中的索引鍵類型。</typeparam>
+      <typeparam name="TValue">字典中的值類型。</typeparam>
+      <filterpriority>1</filterpriority>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.#ctor">
+      <summary>初始化 <see cref="T:System.Collections.Generic.Dictionary`2" /> 類別的新執行個體，這個執行個體是空白的、具有預設的初始容量，並使用索引鍵類型的預設相等比較子。</summary>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})">
+      <summary>初始化 <see cref="T:System.Collections.Generic.Dictionary`2" /> 類別的新執行個體，其中包含從指定的 <see cref="T:System.Collections.Generic.IDictionary`2" /> 複製的項目，並使用索引鍵類型的預設相等比較子。</summary>
+      <param name="dictionary">要將其項目複製到新 <see cref="T:System.Collections.Generic.IDictionary`2" /> 的 <see cref="T:System.Collections.Generic.Dictionary`2" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="dictionary" /> 為 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="dictionary" /> 包含一個或多個重複的索引鍵。</exception>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1},System.Collections.Generic.IEqualityComparer{`0})">
+      <summary>初始化 <see cref="T:System.Collections.Generic.Dictionary`2" /> 類別的新執行個體，其中包含從指定的 <see cref="T:System.Collections.Generic.IDictionary`2" /> 複製的項目，並使用指定的 <see cref="T:System.Collections.Generic.IEqualityComparer`1" />。</summary>
+      <param name="dictionary">要將其項目複製到新 <see cref="T:System.Collections.Generic.IDictionary`2" /> 的 <see cref="T:System.Collections.Generic.Dictionary`2" />。</param>
+      <param name="comparer">比較索引鍵時所要使用的 <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 實作，或是 null，表示要為索引鍵的類型使用預設 <see cref="T:System.Collections.Generic.EqualityComparer`1" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="dictionary" /> 為 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="dictionary" /> 包含一個或多個重複的索引鍵。</exception>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0})">
+      <summary>初始化 <see cref="T:System.Collections.Generic.Dictionary`2" /> 類別的新執行個體，這個執行個體是空白的、具有預設的初始容量，並使用指定的 <see cref="T:System.Collections.Generic.IEqualityComparer`1" />。</summary>
+      <param name="comparer">比較索引鍵時所要使用的 <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 實作，或是 null，表示要為索引鍵的類型使用預設 <see cref="T:System.Collections.Generic.EqualityComparer`1" />。</param>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.#ctor(System.Int32)">
+      <summary>初始化 <see cref="T:System.Collections.Generic.Dictionary`2" /> 類別的新執行個體，這個執行個體是空白的、具有指定的初始容量，並使用索引鍵類型的預設相等比較子。</summary>
+      <param name="capacity">
+        <see cref="T:System.Collections.Generic.Dictionary`2" /> 可包含的初始項目數。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="capacity" /> 小於 0。</exception>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.#ctor(System.Int32,System.Collections.Generic.IEqualityComparer{`0})">
+      <summary>初始化 <see cref="T:System.Collections.Generic.Dictionary`2" /> 類別的新執行個體，這個執行個體是空白的、具有指定的初始容量，並使用指定的 <see cref="T:System.Collections.Generic.IEqualityComparer`1" />。</summary>
+      <param name="capacity">
+        <see cref="T:System.Collections.Generic.Dictionary`2" /> 可包含的初始項目數。</param>
+      <param name="comparer">比較索引鍵時所要使用的 <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 實作，或是 null，表示要為索引鍵的類型使用預設 <see cref="T:System.Collections.Generic.EqualityComparer`1" />。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="capacity" /> 小於 0。</exception>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.Add(`0,`1)">
+      <summary>將指定的索引鍵和值加入字典。</summary>
+      <param name="key">要加入的項目的索引鍵。</param>
+      <param name="value">要加入的項目的值。參考類型的值可以是 null。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> 為 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <see cref="T:System.Collections.Generic.Dictionary`2" /> 中已存在具有相同索引鍵的元素。</exception>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.Clear">
+      <summary>從 <see cref="T:System.Collections.Generic.Dictionary`2" /> 移除所有索引鍵和值。</summary>
+    </member>
+    <member name="P:System.Collections.Generic.Dictionary`2.Comparer">
+      <summary>取得 <see cref="T:System.Collections.Generic.IEqualityComparer`1" />，用來判斷字典的索引鍵是否相等。</summary>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 泛型介面實作，用來判斷目前 <see cref="T:System.Collections.Generic.Dictionary`2" /> 的索引鍵是否相等，並提供索引鍵的雜湊值。</returns>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.ContainsKey(`0)">
+      <summary>判斷 <see cref="T:System.Collections.Generic.Dictionary`2" /> 是否包含特定索引鍵。</summary>
+      <returns>如果 true 包含具有指定索引鍵的項目，則為 <see cref="T:System.Collections.Generic.Dictionary`2" />，否則為 false。</returns>
+      <param name="key">要在 <see cref="T:System.Collections.Generic.Dictionary`2" /> 中尋找的索引鍵。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> 為 null。</exception>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.ContainsValue(`1)">
+      <summary>判斷 <see cref="T:System.Collections.Generic.Dictionary`2" /> 是否包含特定值。</summary>
+      <returns>如果 true 包含具有指定值的項目，則為 <see cref="T:System.Collections.Generic.Dictionary`2" />，否則為 false。</returns>
+      <param name="value">要在 <see cref="T:System.Collections.Generic.Dictionary`2" /> 中尋找的值。參考類型的值可以是 null。</param>
+    </member>
+    <member name="P:System.Collections.Generic.Dictionary`2.Count">
+      <summary>取得 <see cref="T:System.Collections.Generic.Dictionary`2" /> 中所包含的索引鍵/值組數目。</summary>
+      <returns>
+        <see cref="T:System.Collections.Generic.Dictionary`2" /> 中所包含的索引鍵/值組數目。</returns>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.GetEnumerator">
+      <summary>傳回在 <see cref="T:System.Collections.Generic.Dictionary`2" /> 中逐一查看的列舉值。</summary>
+      <returns>
+        <see cref="T:System.Collections.Generic.Dictionary`2" /> 的 <see cref="T:System.Collections.Generic.Dictionary`2.Enumerator" /> 結構。</returns>
+    </member>
+    <member name="P:System.Collections.Generic.Dictionary`2.Item(`0)">
+      <summary>取得或設定與指定之索引鍵相關聯的值。</summary>
+      <returns>與指定之索引鍵關聯的值。如果找不到指定的索引鍵，則取得作業會擲回 <see cref="T:System.Collections.Generic.KeyNotFoundException" />，且設定作業會使用指定的索引鍵建立新項目。</returns>
+      <param name="key">要取得或設定之值的索引鍵。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> 為 null。</exception>
+      <exception cref="T:System.Collections.Generic.KeyNotFoundException">會擷取屬性，且 <paramref name="key" /> 不存在於集合中。</exception>
+    </member>
+    <member name="P:System.Collections.Generic.Dictionary`2.Keys">
+      <summary>取得集合，包含 <see cref="T:System.Collections.Generic.Dictionary`2" /> 中的索引鍵。</summary>
+      <returns>
+        <see cref="T:System.Collections.Generic.Dictionary`2.KeyCollection" />，包含 <see cref="T:System.Collections.Generic.Dictionary`2" /> 中的索引鍵。</returns>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.Remove(`0)">
+      <summary>將具有指定索引鍵的值從 <see cref="T:System.Collections.Generic.Dictionary`2" /> 中移除。</summary>
+      <returns>如果成功找到並移除項目則為 true，否則為 false。如果在 <see cref="T:System.Collections.Generic.Dictionary`2" /> 中找不到 <paramref name="key" />，則這個方法會傳回 false。</returns>
+      <param name="key">要移除的項目索引鍵。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> 為 null。</exception>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{T}#Add(System.Collections.Generic.KeyValuePair{`0,`1})">
+      <summary>將指定的值加入具有指定索引鍵的 <see cref="T:System.Collections.Generic.ICollection`1" />。</summary>
+      <param name="keyValuePair">
+        <see cref="T:System.Collections.Generic.KeyValuePair`2" /> 結構，代表要加入 <see cref="T:System.Collections.Generic.Dictionary`2" /> 的索引鍵和值。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="keyValuePair" /> 的索引鍵為 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <see cref="T:System.Collections.Generic.Dictionary`2" /> 中已存在具有相同索引鍵的元素。</exception>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{T}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})">
+      <summary>判斷 <see cref="T:System.Collections.Generic.ICollection`1" /> 是否包含特定索引鍵和值。</summary>
+      <returns>如果在 true 中找到 <paramref name="keyValuePair" />，則為 <see cref="T:System.Collections.Generic.ICollection`1" />，否則為 false。</returns>
+      <param name="keyValuePair">要在 <see cref="T:System.Collections.Generic.KeyValuePair`2" /> 中尋找的 <see cref="T:System.Collections.Generic.ICollection`1" /> 結構。</param>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{T}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">
+      <summary>從指定的陣列索引處開始，將 <see cref="T:System.Collections.Generic.ICollection`1" /> 的項目複製到 <see cref="T:System.Collections.Generic.KeyValuePair`2" /> 類型的陣列。</summary>
+      <param name="array">
+        <see cref="T:System.Collections.Generic.KeyValuePair`2" /> 類型的一維陣列，是從 <see cref="T:System.Collections.Generic.ICollection`1" /> 複製過來之 <see cref="T:System.Collections.Generic.KeyValuePair`2" /> 項目的目的地。陣列必須有以零為起始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中以零起始的索引，即開始複製的位置。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="array" /> 為 null。</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> 小於 0。</exception>
+      <exception cref="T:System.ArgumentException">來源 <see cref="T:System.Collections.Generic.ICollection`1" /> 項目的數量大於從 <paramref name="index" /> 到目的 <paramref name="array" /> 結尾的可用空間。</exception>
+    </member>
+    <member name="P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{T}#IsReadOnly">
+      <summary>取得值，指出字典是否為唯讀。</summary>
+      <returns>如果 true 是唯讀，則為 <see cref="T:System.Collections.Generic.ICollection`1" />，否則為 false。在 <see cref="T:System.Collections.Generic.Dictionary`2" /> 的預設實作中，這個屬性一律會傳回 false。</returns>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#ICollection{T}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})">
+      <summary>從字典移除索引鍵和值。</summary>
+      <returns>如果成功找到並移除 <paramref name="keyValuePair" /> 所代表的索引鍵和值，則為 true，否則為 false。如果在 <see cref="T:System.Collections.Generic.ICollection`1" /> 中找不到 <paramref name="keyValuePair" />，則這個方法會傳回 false。</returns>
+      <param name="keyValuePair">
+        <see cref="T:System.Collections.Generic.KeyValuePair`2" /> 結構，代表要從 <see cref="T:System.Collections.Generic.Dictionary`2" /> 中移除的索引鍵和值。</param>
+    </member>
+    <member name="P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#Keys">
+      <summary>取得 <see cref="T:System.Collections.Generic.ICollection`1" />，包含 <see cref="T:System.Collections.Generic.IDictionary`2" /> 的索引鍵。</summary>
+      <returns>
+        <paramref name="TKey" /> 類型的 <see cref="T:System.Collections.Generic.ICollection`1" />，包含 <see cref="T:System.Collections.Generic.IDictionary`2" /> 的索引鍵。</returns>
+    </member>
+    <member name="P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IDictionary{TKey@TValue}#Values">
+      <summary>取得 <see cref="T:System.Collections.Generic.ICollection`1" />，包含 <see cref="T:System.Collections.Generic.IDictionary`2" /> 中的值。</summary>
+      <returns>
+        <paramref name="TValue" /> 類型的 <see cref="T:System.Collections.Generic.ICollection`1" />，包含 <see cref="T:System.Collections.Generic.IDictionary`2" /> 中的值。</returns>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IEnumerable{T}#GetEnumerator">
+      <summary>傳回逐一查看集合的列舉值。</summary>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerator`1" />，可用於逐一查看集合。</returns>
+    </member>
+    <member name="P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey@TValue}#Keys">
+      <summary>取得集合，其中包含 <see cref="T:System.Collections.Generic.IReadOnlyDictionary`2" /> 的索引鍵。</summary>
+      <returns>集合，包含 <see cref="T:System.Collections.Generic.IReadOnlyDictionary`2" /> 的索引鍵。</returns>
+    </member>
+    <member name="P:System.Collections.Generic.Dictionary`2.System#Collections#Generic#IReadOnlyDictionary{TKey@TValue}#Values">
+      <summary>取得集合，其中包含 <see cref="T:System.Collections.Generic.IReadOnlyDictionary`2" /> 的值。</summary>
+      <returns>集合，包含 <see cref="T:System.Collections.Generic.IReadOnlyDictionary`2" /> 的值。</returns>
+    </member>
+    <member name="M:System.Collections.Generic.Dictionary`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>從指定的陣列索引處開始，將 <see cref="T:System.Collections.Generic.ICollection`1" /> 的項目複製到陣列。</summary>
+      <param name="array">一維陣列，是從 <see cref="T:System.Collections.Generic.ICollection`1" /> 複製過來之項目的目的端。陣列必須有以零為起始的索引。</param>
+      <param name="index">
+        <paramref name="array" /> 中以零起始的索引，即開始複製的位置。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="array" /> 為 null。</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> 小於 0。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="array" /> 是多維的。-或-<paramref name="array" /> 沒有以零起始的索引。-或-來源 <see cref="T:System.Collections.Generic.ICollection`1" /> 項目的數量大於從 <paramref name="index" /> 到目的 <paramref name="array" /> 結尾的可用空間。-或-來源 <see cref="T:Syst
