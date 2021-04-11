@@ -10,7 +10,7 @@ public static class EventManage
     #region PublicMethods
     public static void CallOnResourceUpdate(string _resID)
     {
-        eventOnResourceUpdate?.Invoke(_resID);
+        eventOnResourceUpdate.Invoke(_resID);
     }
     #endregion
 }
