@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class EventHandlers : MonoBehaviour
 {
-    // Текст Количества г(еев)мов
+    // Текст Количества гемов
     public Text GemsText;
     public Text GemsRating;
 
