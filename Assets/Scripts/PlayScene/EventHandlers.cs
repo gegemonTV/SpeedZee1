@@ -49,20 +49,20 @@ public class EventHandlers : MonoBehaviour
 
     }
 
-    private void ResourceUpdater(string _resID)
+    private void ResourceUpdater(string _resID)   // метод, который обновляет ресурсы
     {
         switch (_resID)
         {
-            case "Gems":
+            case "Gems":              //обновление кол-ва кристаллов
                 GemsText.text = PlayerPrefs.GetInt("Gems").ToString();
                 GemsRating.text = PlayerPrefs.GetInt("Gems").ToString();
                 break;
-            case "Energy":
+            case "Energy":           // обновление кол-ва энергии
                 EnergySlider.value = PlayerPrefs.GetFloat("Energy") / 28800f;
                 EnergyCounter.text = TimeUpdates(PlayerPrefs.GetFloat("Energy"));
                 break;
-            case "Upgrade":
-                switch (PlayerPrefs.GetInt("LeverType"))
+            case "Upgrade":          // обновление улучшений
+                switch (PlayerPrefs.GetInt("LeverType"))     // данный блок отвечает за обновление улучшений на главном экране
                 {
                     case 0:
                         UpgradesSlider.value = 0.25f * El.GetUpgrade();
@@ -77,6 +77,7 @@ public class EventHandlers : MonoBehaviour
                         UpgradesText.text = $"{25 * Brilliant.GetUpgrade()}%";
                         break;
                 }
+                // Далее обновление внутри магазина
                 ElSlider.value = 0.25f * El.GetUpgrade();
                 StarSlider.value = 0.25f * Star.GetUpgrade();
                 BrilliantSlider.value = 0.25f * Brilliant.GetUpgrade();
@@ -89,13 +90,13 @@ public class EventHandlers : MonoBehaviour
                 StarGemsText.text = Star.GetPrice().ToString();
                 BrilliantGemsText.text = Brilliant.GetPrice().ToString();
                 break;
-            case "Keys":
+            case "Keys":           //обновление количества ключей
                 KeysText.text = PlayerPrefs.GetInt("Keys").ToString();
                 break;
         }
     }
 
-    private string TimeUpdates(float t)
+    private string TimeUpdates(float t)            // просто перевод времени в строку
     {
         int time = (int)t;
         if (time > 86400f)
