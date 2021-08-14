@@ -15,11 +15,11 @@ public class KeysOpener : MonoBehaviour, IUnityAdsListener
     public GameObject YouBoxLock;
     public GameObject PromoLock;
 
-#if UNITY_IOS
+//#if UNITY_IOS
     private string gameId = "3960506";
-#elif UNITY_ANDROID
-    private string gameId = "3960507";
-#endif
+//#elif UNITY_ANDROID
+//    private string gameId = "3960507";
+//#endif
 
     // Start is called before the first frame update
     void Start()

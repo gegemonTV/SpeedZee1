@@ -54,11 +54,11 @@ public class UpgradesScript : MonoBehaviour, IUnityAdsListener
 
     private string placementIdVideo = "rewardedVideo";
 
-#if UNITY_IOS
-    private string gameId = "3960506";
-#elif UNITY_ANDROID
+//#if UNITY_IOS
+//    private string gameId = "3960506";
+//#elif UNITY_ANDROID
     private string gameId = "3960507";
-#endif
+//#endif
 
     private int PreserveOther = 0;
     private void Start()
